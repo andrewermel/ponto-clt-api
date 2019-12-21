@@ -1,0 +1,2 @@
+ALTER TABLE ponto
+ADD COLUMN functionario_id INT NOT NULL DEFAULT 1;
