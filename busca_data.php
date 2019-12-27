@@ -1,5 +1,5 @@
 <?php
-
+require("utilidades.php");
 if(isset($_GET["buscardata"]) && $_GET["buscardata"] != null){
 	$buscardata = $_GET["buscardata"];
 }
@@ -9,11 +9,8 @@ else {
 
 $funcionario_id = $_GET["funcionario_id"];
 
-$maquina = "us-cdbr-iron-east-05.cleardb.net";
-$usuario="b802b54a90da1a";
-$senha="c5c243fe";
-$database="heroku_78f23a4efb62922";
-$conexao= mysqli_connect($maquina,$usuario,$senha,$database);
+
+$conexao= conecta();
 
 
 $guardadata = mysqli_query($conexao, "SELECT data,type FROM ponto where DATE(data) = '$buscardata'and $funcionario_id = funcionario_id");
