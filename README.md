@@ -21,7 +21,7 @@ CTO (Diretor de tecnologia) em [Me Salva!](https://www.mesalva.com)
 
 # Alunos
 ## Andrew Amorin Ermel
-Desenvolvedor backend desde janeiro de 2019.
+Desenvolvedor backend Jr.
 - [Linkedin](https://www.linkedin.com/in/andrew-ermel-7465ba16a)
 - [Github](https://github.com/andrewermel)
 
