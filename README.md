@@ -25,6 +25,9 @@ Desenvolvedor backend desde janeiro de 2019.
 - [Linkedin](https://www.linkedin.com/in/andrew-ermel-7465ba16a)
 - [Github](https://github.com/andrewermel)
 
+# Pré-Requisitos
+Este projeto assume que todos os alunos já possuem conhecimento básico de PHP e SQL, a ideia aqui é melhorar as skills destes alunos e não ensinar do zero.
+
 # Fases do projeto
 
 - [x] *Procedural simples:* Na primeira fase a ideia é resolver as tarefas de backend descritas no Trello da forma mais 
