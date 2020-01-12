@@ -7,7 +7,7 @@ $usario_autenticado = false;
 
 $cpf = $_GET['cpf'];
 $senha = $_GET['senha'];
-$query = "SELECT cpf,senha FROM funcionarios WHERE cpf = '$cpf'";
+$query = "SELECT cpf,senha, nome, id FROM funcionarios WHERE cpf = '$cpf'";
 
 $banco_usuarios = mysqli_query($conexao, $query);
 
@@ -17,9 +17,16 @@ if($usuariocpf['senha'] == $senha){
   $usario_autenticado = true;
 }
 
+$resposta = [];
+
 if ($usario_autenticado === true) {
-  echo "usuario autenticado";
+  $resposta["mensagem"] = "usuario autenticado";
+  $resposta["nome"] = utf8_encode($usuariocpf['nome']);
+  $resposta["id"] = $usuariocpf['id'];
 }
 else {
-  echo "senha ou usario errado! tente novamente";
+  $resposta["mensagem"] = "senha ou usario errado! tente novamente";
 }
+
+
+echo json_encode($resposta);
