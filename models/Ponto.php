@@ -1,6 +1,4 @@
 <?php
-require("ModelBase.php");
-
 
 function buscaPontosPorDataEFuncionarioId($data, $funcionario_id) {
   $guardadata = query("SELECT data,type FROM ponto WHERE DATE(data) = '$data' and funcionario_id = $funcionario_id");

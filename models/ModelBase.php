@@ -1,5 +1,4 @@
 <?php
-require('utilidades.php');
 
 function query($text){
   $conexao = conecta();

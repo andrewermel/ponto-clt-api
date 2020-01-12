@@ -1,6 +1,4 @@
 <?php
-require("models/Ponto.php");
-
 if(isset($_GET["buscardata"]) && $_GET["buscardata"] != null){
 	$buscardata = $_GET["buscardata"];
 }
