@@ -9,11 +9,9 @@ else {
 
 $funcionario_id = $_GET["funcionario_id"];
 
-
 $conexao= conecta();
 
-
-$guardadata = mysqli_query($conexao, "SELECT data,type FROM ponto where DATE(data) = '$buscardata'and $funcionario_id = funcionario_id");
+$guardadata = mysqli_query($conexao, "SELECT data,type FROM ponto where DATE(data) = '$buscardata' and $funcionario_id = funcionario_id");
 
 $listadata = mysqli_fetch_assoc($guardadata);
 $arraydata = [$listadata];
@@ -26,10 +24,3 @@ while ($listadata !== null) {
 	
 	}
 echo json_encode($arraydata);
-
-/*
-echo "<pre>";
-print_r ($arraydata);
-echo "</pre>";
-*/
-

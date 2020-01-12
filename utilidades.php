@@ -8,3 +8,9 @@ function conecta(){
 	$conexao= mysqli_connect($maquina,$usuario,$senha,$database);
 	return $conexao;
 }
+
+function debug($arr){
+  echo "<pre>";
+  print_r($arr);
+  echo "</pre>";
+}
