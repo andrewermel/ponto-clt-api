@@ -1,17 +1,12 @@
 <?php
-require("utilidades.php");
-
-$conexao = conecta();
-
-$usario_autenticado = false;
+require("models/Funcionario.php");
 
 $cpf = $_GET['cpf'];
 $senha = $_GET['senha'];
-$query = "SELECT cpf,senha, nome, id FROM funcionarios WHERE cpf = '$cpf'";
 
-$banco_usuarios = mysqli_query($conexao, $query);
+$usario_autenticado = false;
 
-$usuariocpf = mysqli_fetch_assoc($banco_usuarios);
+$usuariocpf = bunscaUsarioPorCpf($cpf);
 
 if($usuariocpf['senha'] == $senha){
   $usario_autenticado = true;
@@ -27,6 +22,5 @@ if ($usario_autenticado === true) {
 else {
   $resposta["mensagem"] = "senha ou usario errado! tente novamente";
 }
-
 
 echo json_encode($resposta);
